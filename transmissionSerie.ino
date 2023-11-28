@@ -33,9 +33,19 @@ int main(void)
 {
   USART_Init(MYUBRR);
   while (1){
-    USART_puts("IUT");
+    USART_putsln(" Hello World ");
     _delay_ms(100);
   }
+}
+
+
+
+
+void USART_putsln(unsigned char *str)
+{
+  USART_puts(str);
+  USART_Transmit(10);
+  USART_Transmit(13);
 }
 
 void USART_puts(unsigned char *str)
