@@ -29,14 +29,22 @@
 
 //! define des byte de vérification des erreurs
 
+
+
+
+#define RX_BUFFER_SIZE0 8
 #define FRAMING_ERROR (1<<FE0)
 #define PARITY_ERROR (1<<UPE0)
 #define DATA_OVERRUN (1<<DOR0)
 #define FOSC 16000000 //! Clock Speed
 #define BAUD 9600
 #define MYUBRR FOSC/16/BAUD-1
+char rx_buffer0[RX_BUFFER_SIZE0];
 int flag = 0;
 char receivByte;
+unsigned char rx_wr_index0 = 0, rx_rd_index0 = 0;
+unsigned char rx_counter0=0;
+bool rx_buffer_overflow0;
 int main(void)
 {
   //! Initialisation de la liaison série
@@ -55,8 +63,16 @@ ISR(USART_RX_vect){
   //! a chaque fois que le lis un mots
   char status=UCSR0A; //! lire le registre 
   receivByte = UDR0;//! lire UDR0 pour renitialisé le drapeau
+  rx_buffer0[rx_wr_index0++]=receivByte;
+  if (rx_wr_index0 == RX_BUFFER_SIZE0) rx_wr_index0=0;
+  if (++rx_counter0 == RX_BUFFER_SIZE0)
+  {
+    rx_counter0=0;
+    rx_buffer_overflow0=1;
+  }
   if ((status & (FRAMING_ERROR | PARITY_ERROR | DATA_OVERRUN))==0){ //! test si une erreur apparaît
     flag = 1;
+    
   }
   else{
     
