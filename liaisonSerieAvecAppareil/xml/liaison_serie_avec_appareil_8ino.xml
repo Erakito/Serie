@@ -1,0 +1,360 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="fr">
+  <compounddef id="liaison_serie_avec_appareil_8ino" kind="file" language="C++">
+    <compoundname>liaisonSerieAvecAppareil.ino</compoundname>
+    <sectiondef kind="define">
+      <memberdef kind="define" id="liaison_serie_avec_appareil_8ino_1a802b2b582b121e4632aa9a491d503720" prot="public" static="no">
+        <name>FOSC</name>
+        <initializer>16000000</initializer>
+        <briefdescription>
+<para>Horloge du processeur de la carte. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="31" column="9" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="liaison_serie_avec_appareil_8ino_1a62634036639f88eece6fbf226b45f84b" prot="public" static="no">
+        <name>BAUD</name>
+        <initializer>9600</initializer>
+        <briefdescription>
+<para>Vitesse de la transmission. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="35" column="9" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="define" id="liaison_serie_avec_appareil_8ino_1a711e9130c825a7269c8c87dbb57a85e0" prot="public" static="no">
+        <name>MYUBRR</name>
+        <initializer><ref refid="liaison_serie_avec_appareil_8ino_1a802b2b582b121e4632aa9a491d503720" kindref="member">FOSC</ref>/16/<ref refid="liaison_serie_avec_appareil_8ino_1a62634036639f88eece6fbf226b45f84b" kindref="member">BAUD</ref>-1</initializer>
+        <briefdescription>
+<para>Prescaler. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="39" column="9" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="39" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="var">
+      <memberdef kind="variable" id="liaison_serie_avec_appareil_8ino_1a39758d42d41fc605725e59be4766bde5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flag3</definition>
+        <argsstring></argsstring>
+        <name>flag3</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Drapeau de l&apos;interruption 3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="43" column="5" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="liaison_serie_avec_appareil_8ino_1a7d375f851c7e3be25ed08914177755db" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int flag0</definition>
+        <argsstring></argsstring>
+        <name>flag0</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Drapeau de l&apos;interruption 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="47" column="5" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="47" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="liaison_serie_avec_appareil_8ino_1a840291bc02cba5474a4cb46a9b9566fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int main</definition>
+        <argsstring>(void)</argsstring>
+        <name>main</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>La fonction main initialise les deux communication série, autorise les interruption et va boucler lorsque que l&apos;arduino va émettre ou recevoir des information sur la liaison série. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="54" column="5" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="54" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="liaison_serie_avec_appareil_8ino_1a88e32db0cad75219c51253f5c1052fc0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(USART3_RX_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>USART3_RX_vect</type>
+        </param>
+        <briefdescription>
+<para>Interruption lié au receive des deux liaison série 3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="75" column="1" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="75" bodyend="77"/>
+      </memberdef>
+      <memberdef kind="function" id="liaison_serie_avec_appareil_8ino_1a084f0a9cf05b1877bd8a71a90dae7ff8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ISR</definition>
+        <argsstring>(USART0_RX_vect)</argsstring>
+        <name>ISR</name>
+        <param>
+          <type>USART0_RX_vect</type>
+        </param>
+        <briefdescription>
+<para>Interruption lié au receive des deux liaison série 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="81" column="1" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="liaison_serie_avec_appareil_8ino_1ab8c416106cf1aff4ccdb3da4860fc179" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART_Transmit</definition>
+        <argsstring>(unsigned char data)</argsstring>
+        <name>USART_Transmit</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>La fonction permet de transmettre sur la liaisons série 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="88" column="6" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="88" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="liaison_serie_avec_appareil_8ino_1a3386982085d31269a6e776c3be5712b3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART_Transmit3</definition>
+        <argsstring>(unsigned char data)</argsstring>
+        <name>USART_Transmit3</name>
+        <param>
+          <type>unsigned char</type>
+          <declname>data</declname>
+        </param>
+        <briefdescription>
+<para>La fonction USART_Transmit permet de transmettre sur la liaisons série 3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="100" column="6" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="100" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="liaison_serie_avec_appareil_8ino_1a48435142a44158906915a0de70dcab5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char USART_Receive</definition>
+        <argsstring>(void)</argsstring>
+        <name>USART_Receive</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>La fonction permet de recevoir sur la liaisons série 0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="113" column="15" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="113" bodyend="120"/>
+      </memberdef>
+      <memberdef kind="function" id="liaison_serie_avec_appareil_8ino_1a50767addbd207ccc41e33ad71411b27e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>unsigned char</type>
+        <definition>unsigned char USART_Receive3</definition>
+        <argsstring>(void)</argsstring>
+        <name>USART_Receive3</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>La fonction permet de recevoir sur la liaisons série 3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="125" column="15" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="125" bodyend="132"/>
+      </memberdef>
+      <memberdef kind="function" id="liaison_serie_avec_appareil_8ino_1a598d1f81f0ec380aec874a34be2adb16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART_putsSr</definition>
+        <argsstring>(unsigned char *str)</argsstring>
+        <name>USART_putsSr</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>La fonction permet de print des caractère avec &quot;entré&quot; en fin de chaîne sur la liaisonSerie 3 afin de programmer l&apos;appareil en LiaisonSerie. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="138" column="6" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="138" bodyend="142"/>
+      </memberdef>
+      <memberdef kind="function" id="liaison_serie_avec_appareil_8ino_1ab6e9fd192b4aa0d1342af41edb7e8db6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART_puts</definition>
+        <argsstring>(unsigned char *str)</argsstring>
+        <name>USART_puts</name>
+        <param>
+          <type>unsigned char *</type>
+          <declname>str</declname>
+        </param>
+        <briefdescription>
+<para>La fonction permet de print des caractère sur la liaisonSerie 3. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="147" column="6" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="147" bodyend="152"/>
+      </memberdef>
+      <memberdef kind="function" id="liaison_serie_avec_appareil_8ino_1a99f79737b2f8bf945b4c169c69e3e3eb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void USART_Init</definition>
+        <argsstring>(unsigned int ubrr)</argsstring>
+        <name>USART_Init</name>
+        <param>
+          <type>unsigned int</type>
+          <declname>ubrr</declname>
+        </param>
+        <briefdescription>
+<para>La Fonction va initialiser les différentes liaison Serie dont nous avons besoin pour la communication. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="liaisonSerieAvecAppareil.ino" line="159" column="6" bodyfile="liaisonSerieAvecAppareil.ino" bodystart="159" bodyend="173"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>This<sp/>file<sp/>has<sp/>been<sp/>prepared<sp/>for<sp/>Doxygen<sp/>automatic<sp/>documentation<sp/>generation.*/</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FOSC<sp/>16000000<sp/></highlight><highlight class="comment">//<sp/>Clock<sp/>Speed</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">#define<sp/>BAUD<sp/>9600</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MYUBRR<sp/>FOSC/16/BAUD-1</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a39758d42d41fc605725e59be4766bde5" kindref="member">flag3</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a7d375f851c7e3be25ed08914177755db" kindref="member">flag0</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a840291bc02cba5474a4cb46a9b9566fe" kindref="member">main</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a99f79737b2f8bf945b4c169c69e3e3eb" kindref="member">USART_Init</ref>(<ref refid="liaison_serie_avec_appareil_8ino_1a711e9130c825a7269c8c87dbb57a85e0" kindref="member">MYUBRR</ref>);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/>sei();</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(1){</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="liaison_serie_avec_appareil_8ino_1a39758d42d41fc605725e59be4766bde5" kindref="member">flag3</ref>==1){</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liaison_serie_avec_appareil_8ino_1ab8c416106cf1aff4ccdb3da4860fc179" kindref="member">USART_Transmit</ref>(UDR3);<sp/></highlight><highlight class="comment">//transimission<sp/>de<sp/>la<sp/>valeur<sp/>Rx3<sp/>sur<sp/>Tx0<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a39758d42d41fc605725e59be4766bde5" kindref="member">flag3</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="liaison_serie_avec_appareil_8ino_1a7d375f851c7e3be25ed08914177755db" kindref="member">flag0</ref>==1){</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a598d1f81f0ec380aec874a34be2adb16" kindref="member">USART_putsSr</ref>(UDR0);<sp/></highlight><highlight class="comment">//transimission<sp/>de<sp/>la<sp/>valeur<sp/>Rx3<sp/>sur<sp/>Tx0<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a7d375f851c7e3be25ed08914177755db" kindref="member">flag0</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>_delay_ms(1);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>}</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><ref refid="liaison_serie_avec_appareil_8ino_1a88e32db0cad75219c51253f5c1052fc0" kindref="member">ISR</ref>(USART3_RX_vect){</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a39758d42d41fc605725e59be4766bde5" kindref="member">flag3</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><ref refid="liaison_serie_avec_appareil_8ino_1a88e32db0cad75219c51253f5c1052fc0" kindref="member">ISR</ref>(USART0_RX_vect){</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a7d375f851c7e3be25ed08914177755db" kindref="member">flag0</ref><sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liaison_serie_avec_appareil_8ino_1ab8c416106cf1aff4ccdb3da4860fc179" kindref="member">USART_Transmit</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Wait<sp/>for<sp/>empty<sp/>transmit<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!(UCSR0A<sp/>&amp;<sp/>(1&lt;&lt;UDRE0)))</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">;</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>data<sp/>into<sp/>buffer,<sp/>sends<sp/>the<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">UDR0<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a3386982085d31269a6e776c3be5712b3" kindref="member">USART_Transmit3</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>data)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Wait<sp/>for<sp/>empty<sp/>transmit<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!(UCSR3A<sp/>&amp;<sp/>(1&lt;&lt;UDRE3)))</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Put<sp/>data<sp/>into<sp/>buffer,<sp/>sends<sp/>the<sp/>data<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">UDR3<sp/>=<sp/>data;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a48435142a44158906915a0de70dcab5c" kindref="member">USART_Receive</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Wait<sp/>for<sp/>data<sp/>to<sp/>be<sp/>received<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!(UCSR0A<sp/>&amp;<sp/>(1&lt;&lt;RXC0)))</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Get<sp/>and<sp/>return<sp/>received<sp/>data<sp/>from<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>UDR0;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a50767addbd207ccc41e33ad71411b27e" kindref="member">USART_Receive3</ref>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Wait<sp/>for<sp/>data<sp/>to<sp/>be<sp/>received<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!(UCSR3A<sp/>&amp;<sp/>(1&lt;&lt;RXC3)))</highlight></codeline>
+<codeline lineno="129"><highlight class="normal">;</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Get<sp/>and<sp/>return<sp/>received<sp/>data<sp/>from<sp/>buffer<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>UDR3;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a598d1f81f0ec380aec874a34be2adb16" kindref="member">USART_putsSr</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str)</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><ref refid="liaison_serie_avec_appareil_8ino_1ab6e9fd192b4aa0d1342af41edb7e8db6" kindref="member">USART_puts</ref>(str);</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a3386982085d31269a6e776c3be5712b3" kindref="member">USART_Transmit3</ref>(10);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liaison_serie_avec_appareil_8ino_1ab6e9fd192b4aa0d1342af41edb7e8db6" kindref="member">USART_puts</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*str)<sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/>{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a3386982085d31269a6e776c3be5712b3" kindref="member">USART_Transmit3</ref>(*str);</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(*++str!=0);</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="liaison_serie_avec_appareil_8ino_1a99f79737b2f8bf945b4c169c69e3e3eb" kindref="member">USART_Init</ref>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>ubrr)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="comment">/*Init<sp/>du<sp/>Registre<sp/>USART0*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">UBRR0H<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>char)(ubrr&gt;&gt;8);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">UBRR0L<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>char)ubrr;</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight><highlight class="comment">//Init<sp/>du<sp/>registre<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="165"><highlight class="normal">UBRR3H<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>char)(ubrr&gt;&gt;8);</highlight></codeline>
+<codeline lineno="166"><highlight class="normal">UBRR3L<sp/>=<sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>char)ubrr;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="comment">//<sp/>activer<sp/>transmettre<sp/>et<sp/>recevoir<sp/>et<sp/>l&apos;interruption<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal">UCSR0B<sp/>=<sp/>(1&lt;&lt;RXEN0)|(1&lt;&lt;TXEN0)|(1&lt;&lt;RXCIE0);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal">UCSR3B<sp/>=<sp/>(1&lt;&lt;RXEN3)|(1&lt;&lt;TXEN3)|(1&lt;&lt;RXCIE3);</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>1<sp/>bit<sp/>de<sp/>stop<sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="171"><highlight class="normal">UCSR3C<sp/>=<sp/>(3&lt;&lt;UCSZ30);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">UCSR0C<sp/>=<sp/>(3&lt;&lt;UCSZ00);</highlight></codeline>
+<codeline lineno="173"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="liaisonSerieAvecAppareil.ino"/>
+  </compounddef>
+</doxygen>

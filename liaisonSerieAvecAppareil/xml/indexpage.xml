@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.8" xml:lang="fr">
+  <compounddef id="indexpage" kind="page">
+    <compoundname>index</compoundname>
+    <title>LiaisonSerieAvecAppareil</title>
+    <briefdescription>
+<para>Liaison série. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Liaison série. Ce code permet d&apos;émettre et recevoir des information par les liaison série 0 et 3 de l&apos;arduino mega afin de contrôler un appareil de mesure</para>
+<para><simplesect kind="par"><title>Application note:</title><para><verbatim> Utilisation de ce code sur un générateur basse fréquence GF266
+</verbatim> </para>
+</simplesect>
+<simplesect kind="par"><title>Documentation</title><para><verbatim> Documentation en Doxygene
+</verbatim> </para>
+</simplesect>
+<simplesect kind="author"><para>Thomas Meunier <linebreak/>
+ IUT de Troyes</para>
+</simplesect>
+<simplesect kind="rcs"><title>Name</title><para>liaisonSerieAvecAppareil Version PrintSr </para>
+</simplesect>
+<simplesect kind="rcs"><title>Revision</title><para>1.O </para>
+</simplesect>
+<simplesect kind="rcs"><title>RCSfile</title><para>main.c,v </para>
+</simplesect>
+<simplesect kind="rcs"><title>Date</title><para>09/12/23 </para>
+</simplesect>
+<linebreak/>
+</para>
+    </detaileddescription>
+    <location file="liaisonSerieAvecAppareil.ino"/>
+  </compounddef>
+</doxygen>
